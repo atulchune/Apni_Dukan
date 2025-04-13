@@ -116,7 +116,7 @@ async function sendOrderToBackend(
       status: "Paid",
     };
   
-    const res = await fetch(`http://localhost:8000/api/createorder`, {
+    const res = await fetch(`https://apni-dukan-backend.onrender.com/api/createorder`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

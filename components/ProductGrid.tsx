@@ -15,7 +15,6 @@ const ProductGrid = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      console.log("inside fetch")
       try {
         const response = await fetch(
           `/api/fetchProductByType`,
@@ -31,7 +30,6 @@ const ProductGrid = () => {
         );
         if (response.ok) {
           const data = await response.json();
-          console.log(data, 'data------------hitesh----------------')
           setProducts(data.data);
         } 
       } catch (error) {
@@ -42,7 +40,6 @@ const ProductGrid = () => {
     };
     fetchData();
   }, [selectedTab]);
-console.log(selectedTab,'selectedTab')
   return (
     <div className="mt-10 flex flex-col items-center">
       <HomeTabbar selectedTab={selectedTab} onTabSelect={setSelectedTab} />

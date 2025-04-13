@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import { notFound } from "next/navigation";
 import React from "react";
-import { Product } from "@/app/(client)/types/ProductType";
 import { getProductById } from "@/app/(client)/serverApi/utility";
 const SingleProductPage = async ({
   params,
@@ -22,38 +21,6 @@ const SingleProductPage = async ({
 }) => {
   const { Id } = await params;
   const product = await getProductById(Id);
-//   const [product,setProduct] = useState<Product>()
-//    const [loading, setLoading] = useState(false);
-//    useEffect(() => {
-//      const fetchData = async () => {
-//        setLoading(true);
-//        console.log("inside fetch")
-//        try {
-//          const response = await fetch(
-//            `/api/fetchProductById`,
-//            {
-//              method: "POST",
-//              headers: {
-//                "Content-Type": "application/json",
-//              },
-//              body: JSON.stringify({
-//                Id:Id
-//              })
-//            }
-//          );
-//          if (response.ok) {
-//            const data = await response.json();
-//            console.log(data, 'data------------hitesh----------------')
-//            setProduct(data.data);
-//          } 
-//        } catch (error) {
-//          console.log("Product fetching Error", error);
-//        } finally {
-//          setLoading(false);
-//        }
-//      };
-//      fetchData();
-//    }, [Id]);
   if (!product) {
     return notFound();
   }

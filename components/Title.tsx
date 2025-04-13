@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import React, { ReactNode } from 'react'
+import React from 'react'
 interface Props{
     children:React.ReactNode;
     className?:string;

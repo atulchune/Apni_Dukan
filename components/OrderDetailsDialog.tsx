@@ -22,7 +22,6 @@ interface Props {
 
 const OrderDetailsDialog: FC<Props> = ({ order, isOpen, onClose }) => {
   if (!order) return null;
-  console.log(order.products[0].product.Images[0].filePath,"ordesrsff");
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

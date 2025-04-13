@@ -69,7 +69,6 @@ const CartPage = () => {
         clerkUserId: user!.id,
       };
       const checkoutUrl = await createCheckoutSession(cartProducts, metadata);
-      console.log(checkoutUrl,'checkoutUrl')
       if (checkoutUrl) {
         window.location.href = checkoutUrl;
       }
@@ -79,7 +78,6 @@ const CartPage = () => {
       setLoading(false);
     }
   };
-console.log(user,cartProducts,'user')
   return (
     <div className="bg-gray-50 pb-52 md:pb-10">
       {isSignedIn ? (

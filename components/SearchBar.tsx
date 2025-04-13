@@ -44,7 +44,6 @@ const SearchBar = () => {
       );
       if (response.ok) {
         const data = await response.json();
-        console.log(data,'data')
         setProducts(data.message);
       }
     } catch (error) {

@@ -20,7 +20,6 @@ const SuccessPage = () => {
       resetCart();
     }
   }, [orderNumber, sessionId, resetCart, router]);
-console.log("orderNumber",orderNumber,"sessionId",sessionId)
   return (
     <div className="py-10 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
       <motion.div

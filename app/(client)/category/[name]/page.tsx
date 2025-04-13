@@ -11,7 +11,6 @@ const CategoryPage = async ({
 }) => {
   const { name } = await params;
   const categories = await getCategory();
-console.log(categories,"categories")
   return (
     <Container className="py-10">
       <Title className="text-xl">

@@ -10,13 +10,13 @@ export async function POST(req: Request) {
             },
         });
         if (!response.ok) {
-            console.log(response.statusText,"server error message")
             throw new Error(`Error: ${response.statusText}`);
         }
 
         const Response = await response.json();
         return NextResponse.json(Response);
-    } catch (error: any) {
-        return NextResponse.json({ error: error.message || 'Something went wrong' }, { status: 500 });
-    }
+    } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : 'Something went wrong';
+        return NextResponse.json({ error: message }, { status: 500 });
+      }
 }

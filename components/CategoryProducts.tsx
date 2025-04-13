@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { Loader2 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import ProductCard from "./ProductCard";
-import NoProductsAvailable from "../components/NoProductAvailable";
+import NoProductsAvailableCategory from "../components/NoProductsAvailableCategory";
 interface Props {
   categories: Category[];
   categoryName: string;
@@ -32,7 +32,6 @@ const CategoryProducts = ({ categories, categoryName }: Props) => {
               );
               if (response.ok) {
                 const data = await response.json();
-                console.log(data, 'data------7566575666------hitesh----------------')
                 setProducts(data.data);
               }
     } catch (error) {
@@ -86,7 +85,7 @@ const CategoryProducts = ({ categories, categoryName }: Props) => {
                 ))}
               </div>
             ) : (
-              <NoProductsAvailable
+              <NoProductsAvailableCategory
                 selectedTab={currentSlug}
                 className="mt-0 w-full"
               />
