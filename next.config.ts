@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['localhost'], // Add 'localhost' to allow images from your backend
+    domains: ['localhost','https://apni-dukan-backend.onrender.com'], // Add 'localhost' to allow images from your backend
   },
 };
 
