@@ -1,6 +1,6 @@
 import { Product } from "@/app/(client)/types/ProductType";
 // import { urlFor } from "@/sanity/lib/image";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import PriceView from "./PriceView";

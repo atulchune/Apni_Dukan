@@ -11,7 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table";
-import Image from "next/image";
+// import Image from "next/image";
 import PriceFormatter from "./PriceFormatter";
 
 interface Props {

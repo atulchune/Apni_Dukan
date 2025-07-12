@@ -12,7 +12,7 @@ import { Input } from "./ui/input";
 // import { client } from "@/sanity/lib/client";
 // import { Product } from "@/sanity.types";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 // import { urlFor } from "@/sanity/lib/image";
 import PriceView from "./PriceView";
 import AddToCartButton from "../components/AddToCardButton";

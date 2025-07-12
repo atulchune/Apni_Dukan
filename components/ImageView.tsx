@@ -7,7 +7,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 // import { urlFor } from "@/sanity/lib/image";
-import Image from "next/image";
+// import Image from "next/image";
 import { Images } from "@/app/(client)/types/ProductType";
 interface Props {
   images:Images[]

@@ -16,7 +16,7 @@ import {
 import useCartStore from "@/app/(client)/store";
 import { useAuth, useUser } from "@clerk/nextjs";
 import { Heart, ShoppingBag, Trash } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
