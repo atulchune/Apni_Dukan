@@ -1,6 +1,6 @@
 import { Product } from "@/app/(client)/types/ProductType";
 // import { urlFor } from "@/sanity/lib/image";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import PriceView from "./PriceView";
@@ -12,14 +12,14 @@ const ProductCard = ({ product }: { product: Product }) => {
       <div className=" bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-200 overflow-hidden relative">
         {product?.Images && (
           <Link href={`product/${product?.ProductId}`}>
-            <Image
+            <img
               src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${product?.Images[0].filePath}`}
               width={500}
               height={500}
               alt="productImage"
-              priority
+              
               className={`w-full h-72 object-contain overflow-hidden hoverEffect ${product?.Stock !== 0 && "group-hover:scale-105"}`}
-            />
+            ></img>
           </Link>
         )}
         {product?.Stock === 0 && (
