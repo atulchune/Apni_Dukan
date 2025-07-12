@@ -105,14 +105,14 @@ const CartPage = () => {
                                 href={`/product/${product?.ProductId}`}
                                 className="border p-0.5 md:p-1 mr-2 rounded-md overflow-hidden group"
                               >
-                                <Image
+                                <img
                                   src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${product?.Images[0].filePath}`}
                                   alt="productImage"
                                   width={500}
                                   height={500}
                                   loading="lazy"
                                   className="w-32 md:w-40 h-32 md:h-40 object-cover group-hover:scale-105 overflow-hidden hoverEffect"
-                                />
+                                ></img>
                               </Link>
                             )}
                             <div className="h-full flex flex-1 items-start flex-col justify-between py-1">
@@ -219,13 +219,13 @@ const CartPage = () => {
                         href={"/"}
                         className="flex items-center justify-center py-2 border border-darkColor/50 rounded-full hover:border-darkColor hover:bg-darkColor/5 hoverEffect"
                       >
-                        <Image
+                        <img
                           src={"/paypalLogo.png"}
                           alt="paypalLogo"
                           width={48}
                           height={48}
                           className="w-20 "
-                        />
+                        ></img>
                       </Link>
                     </div>
                   </div>
@@ -266,13 +266,13 @@ const CartPage = () => {
                         href={"/"}
                         className="flex items-center justify-center py-2 border border-darkColor/50 rounded-full hover:border-darkColor hover:bg-darkColor/5 hoverEffect"
                       >
-                        <Image
+                        <img
                           src={"/paypalLogo.png"}
                           alt="paypalLogo"
                           width={48}
                           height={48}
                           className="w-20"
-                        />
+                      ></img>
                       </Link>
                     </div>
                   </div>

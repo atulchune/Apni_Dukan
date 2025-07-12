@@ -18,13 +18,13 @@ const EmptyCart = () => {
           transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
           className="w-48 h-48 mx-auto relative"
         >
-          <Image
+          <img
             src={"/emptyCart.png"}
             width={48}
             height={48}
             alt="emptyCart"
             className=" drop-shadow-lg w-48 h-48 object-contain"
-          />
+          ></img>
           <motion.div
             animate={{ x: [0, -10, 10, 0], y: [0, -5, 5, 0] }}
             transition={{ repeat: Infinity, duration: 3, ease: "linear" }}

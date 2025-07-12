@@ -73,13 +73,13 @@ const OrderDetailsDialog: FC<Props> = ({ order, isOpen, onClose }) => {
               <TableRow key={index}>
                 <TableCell className="flex items-center gap-2">
                   {product?.product?.Images && (
-                    <Image
+                    <img
                       src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${product?.product?.Images[0].filePath}`}
                       alt="productImage"
                       width={50}
                       height={50}
                       className="border rounded-sm w-14 h-14 object-contain"
-                    />
+                    ></img>
                   )}
                   {product?.product && (
                     <p className=" line-clamp-1">{product?.product?.name}</p>

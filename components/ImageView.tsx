@@ -25,15 +25,14 @@ const ImageView = ({ images = [] }: Props) => {
           transition={{ duration: 0.5 }}
           className="w-full max-h-[550px] min-h-[450px] border border-darkColor/10 rounded-md group overflow-hidden"
         >
-          <Image
+          <img
             // src={urlFor(active).url()}
             src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${active.filePath}`}
             alt="productImage"
             width={700}
             height={700}
-            priority
             className="w-full h-96 max-h-[550px] min-h-[500px] object-contain group-hover:scale-110 hoverEffect rounded-md"
-          />
+          ></img>
         </motion.div>
       </AnimatePresence>
       <div className="grid grid-cols-6 gap-2 h-20 md:h-28">
@@ -43,14 +42,14 @@ const ImageView = ({ images = [] }: Props) => {
             key={image?.fileId}
             className={`border rounded-md overflow-hidden ${active?.fileId === image?.fileId ? "ring-1 ring-darkColor" : ""}`}
           >
-            <Image
+            <img
             //   src={urlFor(image).url()}
               src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.filePath}`}
               alt="productImage"
               width={100}
               height={100}
               className="w-full h-auto object-contain"
-            />
+            ></img>
           </button>
         ))}
       </div>

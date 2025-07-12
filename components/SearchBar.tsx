@@ -108,13 +108,13 @@ const SearchBar = () => {
                       onClick={() => setShowSearch(false)}
                     >
                       {product?.Images && (
-                        <Image
+                        <img
                           width={200}
                           height={200}
                           src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${product?.Images[0].filePath}`}
                           alt="productImage"
                           className="object-cover w-full h-full group-hover:scale-110 hoverEffect"
-                        />
+                        ></img>
                       )}
                     </Link>
                     <div className="px-4 py-2 flex-grow">
